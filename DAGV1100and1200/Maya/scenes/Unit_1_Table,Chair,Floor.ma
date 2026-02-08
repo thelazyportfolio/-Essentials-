@@ -1,7 +1,31 @@
 //Maya ASCII 2026 scene
 //Name: Unit_1_Table,Chair,Floor.ma
-//Last modified: Sat, Feb 07, 2026 11:32:32 PM
+//Last modified: Sat, Feb 07, 2026 11:40:18 PM
 //Codeset: 1252
+file -rdi 1 -ns "Yleana_table_and_rug" -rfn "Yleana_table_and_rugRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana table and rug.ma";
+file -rdi 1 -ns "Yleana_Chair" -rfn "Yleana_ChairRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana Chair.ma";
+file -rdi 1 -ns "Yleana_Chair1" -rfn "Yleana_ChairRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana Chair.ma";
+file -rdi 1 -ns "yleana_lamp" -rfn "yleana_lampRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/yleana lamp.ma";
+file -rdi 1 -ns "Yleana_plates" -rfn "Yleana_platesRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana plates.ma";
+file -rdi 1 -ns "yleana_bookshelf" -rfn "yleana_bookshelfRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/yleana bookshelf.ma";
+file -r -ns "Yleana_table_and_rug" -dr 1 -rfn "Yleana_table_and_rugRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana table and rug.ma";
+file -r -ns "Yleana_Chair" -dr 1 -rfn "Yleana_ChairRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana Chair.ma";
+file -r -ns "Yleana_Chair1" -dr 1 -rfn "Yleana_ChairRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana Chair.ma";
+file -r -ns "yleana_lamp" -dr 1 -rfn "yleana_lampRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/yleana lamp.ma";
+file -r -ns "Yleana_plates" -dr 1 -rfn "Yleana_platesRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana plates.ma";
+file -r -ns "yleana_bookshelf" -dr 1 -rfn "yleana_bookshelfRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/yleana bookshelf.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.4.2";
@@ -11,13 +35,13 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "9AE2F259-45E3-440D-1216-6DBF87EF3AB5";
+fileInfo "UUID" "8EADB924-4415-8065-4A4C-4A8B3C00E2FA";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "741192EF-4E13-F723-FC32-BC96EAF4048C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.3169724992866527 15.236373268846645 40.14715024793216 ;
-	setAttr ".r" -type "double3" -14.400000000016925 -1794.8000000000889 -9.9803083504321648e-17 ;
+	setAttr ".t" -type "double3" 31.23480241092982 15.23637326884077 29.833402369862661 ;
+	setAttr ".r" -type "double3" -14.400000000007829 -1754.8000000000413 2.2568835265786616e-15 ;
 	setAttr ".rpt" -type "double3" 7.3185074347254156e-16 5.5610988891110226e-16 -2.2582167677923306e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E91ACFE6-4164-8B36-18AA-A1818D26E18E";
@@ -3439,6 +3463,68 @@ createNode groupId -n "groupId74";
 createNode groupId -n "groupId78";
 	rename -uid "F8A7621E-4CB3-D216-321A-2A8A8A5499E8";
 	setAttr ".ihi" 0;
+createNode reference -n "Yleana_table_and_rugRN";
+	rename -uid "D7BD66D6-4F00-9A33-E698-218A6BFEFEEA";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Yleana_table_and_rugRN"
+		"Yleana_table_and_rugRN" 0
+		"Yleana_table_and_rugRN" 1
+		2 "|Yleana_table_and_rug:Table_and_rug" "translate" " -type \"double3\" 0.71015244163887115 -0.88098658069492064 5.63873459966215229";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Yleana_ChairRN";
+	rename -uid "C5DA9F84-40F3-8942-2CC6-989707FBE8EF";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Yleana_ChairRN"
+		"Yleana_ChairRN" 0
+		"Yleana_ChairRN" 1
+		2 "|Yleana_Chair:Chair_right|Yleana_Chair:Chair2" "translate" " -type \"double3\" 6.39557057608085699 -0.073147970204917812 5.43478195073046244";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Yleana_ChairRN1";
+	rename -uid "D14485C6-44FA-F388-5862-BD9D7875FF59";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Yleana_ChairRN1"
+		"Yleana_ChairRN1" 0
+		"Yleana_ChairRN1" 2
+		2 "|Yleana_Chair1:Chair_right|Yleana_Chair1:Chair2" "translate" " -type \"double3\" -5.41972957669900879 0 6.12005269499467808"
+		
+		2 "|Yleana_Chair1:Chair_right|Yleana_Chair1:Chair2" "rotate" " -type \"double3\" 0 180.78175463079125507 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "yleana_lampRN";
+	rename -uid "2A5A1B21-4702-DB9A-32DA-02802E172C6A";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"yleana_lampRN"
+		"yleana_lampRN" 0
+		"yleana_lampRN" 3
+		2 "|yleana_lamp:Lamp|yleana_lamp:pSphere3" "translate" " -type \"double3\" -9.26969593205756226 0 -9.75430580895024768"
+		
+		2 "|yleana_lamp:Lamp|yleana_lamp:pSphere4" "translate" " -type \"double3\" -9.26969593205756226 0 -9.75430580895024768"
+		
+		2 "|yleana_lamp:Lamp|yleana_lamp:pSphere5" "translate" " -type \"double3\" -9.26969593205756226 0 -9.75430580895024768";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "Yleana_platesRN";
+	rename -uid "932E2B81-408B-3CDF-EE11-8987FD602E1F";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Yleana_platesRN"
+		"Yleana_platesRN" 0
+		"Yleana_platesRN" 2
+		2 "|Yleana_plates:Plates|Yleana_plates:plate_1" "translate" " -type \"double3\" 0 -2.59156749930863217 0.59787344233655304"
+		
+		2 "|Yleana_plates:Plates|Yleana_plates:plate" "translate" " -type \"double3\" 0 -2.59156749930863217 0.59787344233655304";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "yleana_bookshelfRN";
+	rename -uid "EC56ECE6-4731-DE41-35EE-668575EFD7FC";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"yleana_bookshelfRN"
+		"yleana_bookshelfRN" 0
+		"yleana_bookshelfRN" 1
+		2 "|yleana_bookshelf:Bookshelf" "translate" " -type \"double3\" 8 0 -8";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3464,9 +3550,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 10 ".dsm";
+	setAttr -s 58 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 2 ".gn";
+	setAttr -s 6 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
