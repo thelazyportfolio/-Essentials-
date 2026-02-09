@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Unit_1_Table,Chair,Floor.ma
-//Last modified: Sat, Feb 07, 2026 11:40:18 PM
+//Last modified: Mon, Feb 09, 2026 03:20:03 PM
 //Codeset: 1252
 file -rdi 1 -ns "Yleana_table_and_rug" -rfn "Yleana_table_and_rugRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana table and rug.ma";
@@ -35,19 +35,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "8EADB924-4415-8065-4A4C-4A8B3C00E2FA";
+fileInfo "UUID" "A9BBC807-4036-749B-858A-E9A4D782CE03";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "741192EF-4E13-F723-FC32-BC96EAF4048C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 31.23480241092982 15.23637326884077 29.833402369862661 ;
-	setAttr ".r" -type "double3" -14.400000000007829 -1754.8000000000413 2.2568835265786616e-15 ;
+	setAttr ".t" -type "double3" 39.850670549009237 22.628833099156733 35.382839693385883 ;
+	setAttr ".r" -type "double3" -19.20000000000616 -1751.6000000000361 1.1976310849196797e-15 ;
 	setAttr ".rpt" -type "double3" 7.3185074347254156e-16 5.5610988891110226e-16 -2.2582167677923306e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E91ACFE6-4164-8B36-18AA-A1818D26E18E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 36.560605599474542;
+	setAttr ".coi" 48.34651989177496;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3368,20 +3368,20 @@ createNode mesh -n "polySurfaceShape2" -p "polySurface2";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "31AF8981-40B4-A92A-1AEC-53A5292FC45F";
+	rename -uid "2C9D34FB-4989-87E7-098B-899AE6B320E9";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "536DBAB0-4167-7DDD-6BD1-A8841E4F9F7C";
+	rename -uid "D2D6D10A-436E-6D37-1B8F-A0B8D4250A50";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4E91D930-4A74-CB8A-78B7-30AB5BAE3F60";
+	rename -uid "3D5682CE-45B7-5967-A4B1-DEBCC367F813";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0C1E02E4-4739-4BBB-C702-B7BAC803A013";
+	rename -uid "9A4559FF-43C8-4166-2D43-A3B17F4CB64D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "06264E6B-4B40-4962-3D9C-0D8517ACB0C8";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6F01092B-45EA-13DE-5ACA-D8821B72158D";
+	rename -uid "D9834218-435A-3363-3204-8E98988C505D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1CB2CF0F-4F56-91A6-0082-4EABBA2D6A92";
 	setAttr ".g" yes;
@@ -3573,8 +3573,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId74.id" "Flor1Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Flor1Shape.iog.og[0].gco";
 connectAttr "groupId34.id" "Flor1Shape.ciog.cog[0].cgid";
