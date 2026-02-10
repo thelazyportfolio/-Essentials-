@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Unit_1_Table,Chair,Floor.ma
-//Last modified: Tue, Feb 10, 2026 09:27:38 AM
+//Last modified: Tue, Feb 10, 2026 09:28:36 AM
 //Codeset: 1252
 file -rdi 1 -ns "Yleana_table_and_rug" -rfn "Yleana_table_and_rugRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana table and rug.ma";
@@ -37,13 +37,13 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "71EC0D62-4D42-F2E0-AF53-0F98646B1A8C";
+fileInfo "UUID" "D80DA194-4B15-A86E-1BC3-ED9E820409A4";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "741192EF-4E13-F723-FC32-BC96EAF4048C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 21.98055868415376 7.7312317159182466 24.086636879619647 ;
-	setAttr ".r" -type "double3" -7.7999999999981364 -2876.3999999999864 4.9794424820797651e-17 ;
+	setAttr ".t" -type "double3" 21.625511390905132 17.137754748174956 20.715223135545187 ;
+	setAttr ".r" -type "double3" -31.799999999997581 -2876.7999999999538 -1.9909510380852925e-16 ;
 	setAttr ".rpt" -type "double3" 7.3185074347254156e-16 5.5610988891110226e-16 -2.2582167677923306e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E91ACFE6-4164-8B36-18AA-A1818D26E18E";
