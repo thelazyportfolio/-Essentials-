@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Unit_1_Table,Chair,Floor.ma
-//Last modified: Fri, Feb 27, 2026 02:44:44 PM
+//Last modified: Fri, Feb 27, 2026 02:46:48 PM
 //Codeset: 1252
 file -rdi 1 -ns "Yleana_table_and_rug" -rfn "Yleana_table_and_rugRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana table and rug.ma";
@@ -45,19 +45,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "F29C76F9-4260-83DD-88B3-2997FBEC591F";
+fileInfo "UUID" "606AF149-4BBA-C2B7-2986-949CCD1FE300";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "741192EF-4E13-F723-FC32-BC96EAF4048C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 19.659301922603575 17.434445935598351 43.430122551376357 ;
-	setAttr ".r" -type "double3" -16.800000000005895 -4292.7999999998547 0 ;
+	setAttr ".t" -type "double3" 23.419056529119718 25.121240635961705 51.454927025725908 ;
+	setAttr ".r" -type "double3" -18.600000000000051 -4299.1999999999189 4.252871366519178e-16 ;
 	setAttr ".rpt" -type "double3" 7.3185074347254156e-16 5.5610988891110226e-16 -2.2582167677923306e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E91ACFE6-4164-8B36-18AA-A1818D26E18E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 97.732147889072948;
+	setAttr ".coi" 104.16871799642495;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3401,7 +3401,7 @@ createNode transform -n "sofa" -p "Room";
 	setAttr ".rp" -type "double3" 21 0 -11 ;
 	setAttr ".sp" -type "double3" 21 0 -11 ;
 createNode fosterParent -n "yleana_sofaRNfosterParent1";
-	rename -uid "4C617B48-4668-4FFF-B377-A6AE837D9060";
+	rename -uid "E3D8687F-4A8E-C900-D4D8-98849103DE87";
 createNode mesh -n "yleana_sofa:polySurfaceShape2" -p "yleana_sofaRNfosterParent1";
 	rename -uid "728650CA-404D-C047-784F-45A335276FD0";
 	setAttr -k off ".v";
@@ -4519,9 +4519,9 @@ createNode reference -n "Yleana_platesRN";
 		"Yleana_platesRN" 0
 		"Yleana_platesRN" 3
 		0 "|Yleana_plates:Plates" "|Room" "-s -r "
-		2 "|Room|Yleana_plates:Plates|Yleana_plates:plate_1" "translate" " -type \"double3\" 1.63465207531292123 -2.02243992781603854 0.59787344233655304"
+		2 "|Room|Yleana_plates:Plates|Yleana_plates:plate_1" "translate" " -type \"double3\" 1.63465207531292123 -1.89163165832044466 0.59787344233655304"
 		
-		2 "|Room|Yleana_plates:Plates|Yleana_plates:plate" "translate" " -type \"double3\" 1.63465207531292123 -2.02243992781603854 0.59787344233655304";
+		2 "|Room|Yleana_plates:Plates|Yleana_plates:plate" "translate" " -type \"double3\" 1.63465207531292123 -1.89163165832044466 0.59787344233655304";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "yleana_bookshelfRN";
