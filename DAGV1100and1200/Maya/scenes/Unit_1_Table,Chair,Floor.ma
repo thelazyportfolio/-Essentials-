@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Unit_1_Table,Chair,Floor.ma
-//Last modified: Fri, Feb 13, 2026 02:35:34 AM
+//Last modified: Fri, Feb 27, 2026 02:44:44 PM
 //Codeset: 1252
 file -rdi 1 -ns "Yleana_table_and_rug" -rfn "Yleana_table_and_rugRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana table and rug.ma";
@@ -38,25 +38,26 @@ requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.4.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
-fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "4C6B1A1C-491A-595F-AEC3-158D9778D31D";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
+fileInfo "UUID" "F29C76F9-4260-83DD-88B3-2997FBEC591F";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "741192EF-4E13-F723-FC32-BC96EAF4048C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 34.485920047622585 31.321679222762555 43.912904742087818 ;
-	setAttr ".r" -type "double3" -24.600000000000257 -4641.6000000064078 -2.0292083922931248e-15 ;
+	setAttr ".t" -type "double3" 19.659301922603575 17.434445935598351 43.430122551376357 ;
+	setAttr ".r" -type "double3" -16.800000000005895 -4292.7999999998547 0 ;
 	setAttr ".rpt" -type "double3" 7.3185074347254156e-16 5.5610988891110226e-16 -2.2582167677923306e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E91ACFE6-4164-8B36-18AA-A1818D26E18E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 59.087459284778802;
+	setAttr ".coi" 97.732147889072948;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3383,8 +3384,8 @@ createNode mesh -n "polySurfaceShape2" -p "polySurface2";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "Potted_plant_reference" -p "Room";
 	rename -uid "5291DF63-4534-2EC4-8FE1-6EB6F6AC7392";
-	setAttr ".t" -type "double3" -8.8290947015515524 0 11.218295451434221 ;
-	setAttr ".r" -type "double3" 0 -19.48813795069816 0 ;
+	setAttr ".t" -type "double3" 2.5093824638969373 0 -7.8695008431007683 ;
+	setAttr ".r" -type "double3" 0 -190.52496918469052 0 ;
 	setAttr ".s" -type "double3" 0.26858614006361187 0.26858614006361187 0.26858614006361187 ;
 createNode transform -n "Improved_chair_reference" -p "Room";
 	rename -uid "CFD65789-4264-1FF2-55C2-7D97C992433C";
@@ -3400,7 +3401,7 @@ createNode transform -n "sofa" -p "Room";
 	setAttr ".rp" -type "double3" 21 0 -11 ;
 	setAttr ".sp" -type "double3" 21 0 -11 ;
 createNode fosterParent -n "yleana_sofaRNfosterParent1";
-	rename -uid "7D6A5A31-4D19-18F4-F580-7EA4DCFD3E1B";
+	rename -uid "4C617B48-4668-4FFF-B377-A6AE837D9060";
 createNode mesh -n "yleana_sofa:polySurfaceShape2" -p "yleana_sofaRNfosterParent1";
 	rename -uid "728650CA-404D-C047-784F-45A335276FD0";
 	setAttr -k off ".v";
@@ -4369,20 +4370,20 @@ createNode mesh -n "yleana_sofa:polySurfaceShape1" -p "yleana_sofaRNfosterParent
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "5A23710C-473A-8583-86D1-2AAAC6FC87D2";
+	rename -uid "D98D9D83-42AA-09AE-A339-D78288273DBF";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D6B99EB3-4DB1-CFB2-BD32-DCB596D48F44";
+	rename -uid "9B137739-4165-A70B-78F4-A6B3BA6D7EA6";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "31938B65-467A-42FC-9330-A3A49611FDC7";
+	rename -uid "5733B67F-46BC-6FBF-6554-A78D8FB1ED60";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "29EA6489-4F80-E104-E673-81901334B9F3";
+	rename -uid "B0B07B89-494D-3EB1-3644-0C85742D7103";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "06264E6B-4B40-4962-3D9C-0D8517ACB0C8";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "364813B5-41DF-5B79-8D8D-D194B7FAADC2";
+	rename -uid "1EC60911-4A10-9DD4-C351-B691F7CA1854";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1CB2CF0F-4F56-91A6-0082-4EABBA2D6A92";
 	setAttr ".g" yes;
@@ -4504,11 +4505,11 @@ createNode reference -n "yleana_lampRN";
 		"yleana_lampRN" 0
 		"yleana_lampRN" 4
 		0 "|yleana_lamp:Lamp" "|Room" "-s -r "
-		2 "|Room|yleana_lamp:Lamp|yleana_lamp:pSphere3" "translate" " -type \"double3\" -8.95141285339988002 0.56912757149259363 -9.71959293187311246"
+		2 "|Room|yleana_lamp:Lamp|yleana_lamp:pSphere3" "translate" " -type \"double3\" -8.9432428445456349 0.56912757149259363 9.51227243672946443"
 		
-		2 "|Room|yleana_lamp:Lamp|yleana_lamp:pSphere4" "translate" " -type \"double3\" -8.95141285339988002 0.56912757149259363 -9.7225886320859054"
+		2 "|Room|yleana_lamp:Lamp|yleana_lamp:pSphere4" "translate" " -type \"double3\" -8.9432428445456349 0.56912757149259363 9.50927673651667149"
 		
-		2 "|Room|yleana_lamp:Lamp|yleana_lamp:pSphere5" "translate" " -type \"double3\" -8.95141285339988002 0.56912757149259363 -9.7225886320859054";
+		2 "|Room|yleana_lamp:Lamp|yleana_lamp:pSphere5" "translate" " -type \"double3\" -8.9432428445456349 0.56912757149259363 9.50927673651667149";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Yleana_platesRN";
@@ -4611,7 +4612,7 @@ createNode reference -n "Yleana_potted_plantRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Yleana_potted_plantRN"
 		"Yleana_potted_plantRN" 0
-		"Yleana_potted_plantRN" 16
+		"Yleana_potted_plantRN" 17
 		0 "|Yleana_potted_plant:Plant_curve_practice:loftedSurface2leaf" "|Room|Potted_plant_reference" 
 		"-s -r "
 		0 "|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface9" "|Room|Potted_plant_reference" 
@@ -4643,7 +4644,9 @@ createNode reference -n "Yleana_potted_plantRN";
 		0 "|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface6" "|Room|Potted_plant_reference" 
 		"-s -r "
 		0 "|Yleana_potted_plant:Plant_curve_practice:pSphere1" "|Room|Potted_plant_reference" 
-		"-s -r ";
+		"-s -r "
+		2 "|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface7" 
+		"rotate" " -type \"double3\" 0 -23.42958264867809248 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "yleana_chair_improvedRN";
@@ -4710,7 +4713,7 @@ createNode reference -n "yleana_sofaRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"yleana_sofaRN"
 		"yleana_sofaRN" 0
-		"yleana_sofaRN" 12
+		"yleana_sofaRN" 231
 		0 "|yleana_sofa:sofa" "|Room" "-s -r "
 		0 "|yleana_sofaRNfosterParent1|yleana_sofa:polySurfaceShape1" "|Room|yleana_sofa:sofa|yleana_sofa:pCube27" 
 		"-s -r "
@@ -4718,16 +4721,454 @@ createNode reference -n "yleana_sofaRN";
 		"-s -r "
 		2 "|Room|yleana_sofa:sofa" "translate" " -type \"double3\" 6.05164565647436703 0 0"
 		
-		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27" "translate" " -type \"double3\" -28.6397948269059448 0 -9.03470321113639052"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27" "translate" " -type \"double3\" -44.57222931315357073 0 -3.65871743513878833"
+		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27" "rotate" " -type \"double3\" 0 28.5741490719435447 0"
+		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27" "scale" " -type \"double3\" 0.5365879315733737 0.5365879315733737 0.5365879315733737"
+		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27" "rotatePivot" " -type \"double3\" 21.3632607711825635 0 1.64667313204999566"
+		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27" "scalePivot" " -type \"double3\" 21.36326077118255995 0 1.64667313204999965"
 		
 		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "uvPivot" 
-		" -type \"double2\" 0.5 0.49999999813735485"
+		" -type \"double2\" 0.49999998509883881 0.5"
 		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "uvSet[0].uvSetName" 
 		" -type \"string\" \"map1\""
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts" 
+		" -s 210"
 		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[0]" 
-		" -type \"float3\" 0 0 0"
-		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube28" "translate" " -type \"double3\" -28.6397948269059448 0 -9.03470321113639052"
+		" -type \"float3\" 18.347708 2.51822070000000009 0"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[1]" 
+		" -type \"float3\" 24.210798 2.60049820000000009 -0.72352618000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[2]" 
+		" -type \"float3\" 24.210798 1.78569749999999994 0.65040832999999998"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[3]" 
+		" -type \"float3\" 18.515722 1.78569749999999994 0.65040832999999998"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[4]" 
+		" -type \"float3\" 23.868498 2.27630659999999985 -1.05645060000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[5]" 
+		" -type \"float3\" 18.858023 2.27630659999999985 -1.05645060000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[6]" 
+		" -type \"float3\" 24.158161 2.27630659999999985 -1.03859879999999993"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[7]" 
+		" -type \"float3\" 23.686298 2.15215470000000009 -0.79623681000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[8]" 
+		" -type \"float3\" 23.272926 2.24429459999999992 -1.01586149999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[9]" 
+		" -type \"float3\" 22.829386 2.27630659999999985 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[10]" 
+		" -type \"float3\" 23.288992 2.89186640000000006 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[11]" 
+		" -type \"float3\" 18.568359 2.27630659999999985 -1.03859879999999993"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[12]" 
+		" -type \"float3\" 19.437529 2.89186640000000006 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[13]" 
+		" -type \"float3\" 19.897133 2.27630659999999985 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[14]" 
+		" -type \"float3\" 19.453592 2.24429459999999992 -1.01586149999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[15]" 
+		" -type \"float3\" 19.040224 2.15215470000000009 -0.79623681000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[16]" 
+		" -type \"float3\" 23.288992 2.27630659999999985 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[17]" 
+		" -type \"float3\" 19.437529 2.27630659999999985 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[18]" 
+		" -type \"float3\" 19.1861 0.53296882000000001 0.42883875999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[19]" 
+		" -type \"float3\" 18.71207 0.66812170000000004 0.35134777"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[20]" 
+		" -type \"float3\" 18.515722 0.99440925999999996 0.16426572"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[21]" 
+		" -type \"float3\" 18.515722 1.01449950000000011 4.55051849999999991"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[22]" 
+		" -type \"float3\" 18.70451 0.67400592999999998 4.51296620000000015"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[23]" 
+		" -type \"float3\" 19.160286 0.53296882000000001 4.42230749999999961"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[24]" 
+		" -type \"float3\" 24.210798 0.99440925999999996 0.16426572"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[25]" 
+		" -type \"float3\" 24.01445 0.66812170000000004 0.35134777"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[26]" 
+		" -type \"float3\" 23.540419 0.53296882000000001 0.42883875999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[27]" 
+		" -type \"float3\" 23.566236 0.53296882000000001 4.42230749999999961"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[28]" 
+		" -type \"float3\" 24.022009 0.67400592999999998 4.51296620000000015"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[29]" 
+		" -type \"float3\" 24.210798 1.01449950000000011 4.55051849999999991"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[30]" 
+		" -type \"float3\" 24.040945 1.05732249999999994 -0.61709051999999998"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[31]" 
+		" -type \"float3\" 23.939774 0.69372445000000005 -0.51104337"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[32]" 
+		" -type \"float3\" 23.49662 0.53296882000000001 -0.37944630000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[33]" 
+		" -type \"float3\" 19.229902 0.53296882000000001 -0.37944630000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[34]" 
+		" -type \"float3\" 18.786747 0.69372445000000005 -0.51104337"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[35]" 
+		" -type \"float3\" 18.685574 1.05732249999999994 -0.61709051999999998"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[36]" 
+		" -type \"float3\" 19.204805 0.53296882000000001 4.46683070000000004"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[37]" 
+		" -type \"float3\" 19.114147 0.67400592999999998 4.922606"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[38]" 
+		" -type \"float3\" 19.076595 1.01449950000000011 5.11139390000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[39]" 
+		" -type \"float3\" 23.649923 1.01449950000000011 5.11139390000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[40]" 
+		" -type \"float3\" 23.612371 0.67400592999999998 4.922606"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[41]" 
+		" -type \"float3\" 23.521711 0.53296882000000001 4.46683070000000004"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[42]" 
+		" -type \"float3\" 19.076595 2.23476510000000017 5.11139390000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[43]" 
+		" -type \"float3\" 19.116083 2.57486609999999994 4.9138073999999996"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[44]" 
+		" -type \"float3\" 19.209469 2.69863510000000018 4.44651460000000043"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[45]" 
+		" -type \"float3\" 23.51705 2.69863510000000018 4.44651460000000043"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[46]" 
+		" -type \"float3\" 23.610437 2.57486609999999994 4.9138073999999996"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[47]" 
+		" -type \"float3\" 23.649923 2.23476510000000017 5.11139390000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[48]" 
+		" -type \"float3\" 23.477177 0.53296882000000001 -0.39001685000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[49]" 
+		" -type \"float3\" 23.505074 0.67622483 -0.88397658000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[50]" 
+		" -type \"float3\" 23.392031 1.01612130000000001 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[51]" 
+		" -type \"float3\" 19.334488 1.01612140000000006 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[52]" 
+		" -type \"float3\" 19.221445 0.67622483 -0.88397658000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[53]" 
+		" -type \"float3\" 19.249344 0.53296882000000001 -0.39001685000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[54]" 
+		" -type \"float3\" 18.679998 1.01449950000000011 4.94711730000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[55]" 
+		" -type \"float3\" 18.824492 0.67400592999999998 4.80262519999999959"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[56]" 
+		" -type \"float3\" 19.173326 0.53296882000000001 4.45378969999999974"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[57]" 
+		" -type \"float3\" 18.515722 2.49954870000000007 4.29571910000000035"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[58]" 
+		" -type \"float3\" 18.515722 2.659312 3.69336680000000017"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[59]" 
+		" -type \"float3\" 18.515722 2.06081890000000012 4.55051849999999991"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[60]" 
+		" -type \"float3\" 19.190462 2.698231 4.43877080000000035"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[61]" 
+		" -type \"float3\" 18.831078 2.57090569999999996 4.79666519999999963"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[62]" 
+		" -type \"float3\" 18.679998 2.23142739999999984 4.94711730000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[63]" 
+		" -type \"float3\" 24.046522 1.01449950000000011 4.94711730000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[64]" 
+		" -type \"float3\" 23.902029 0.67400592999999998 4.80262519999999959"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[65]" 
+		" -type \"float3\" 23.553194 0.53296882000000001 4.45378969999999974"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[66]" 
+		" -type \"float3\" 23.545618 2.69872759999999978 4.4482917999999998"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[67]" 
+		" -type \"float3\" 23.898275 2.57105519999999999 4.79948469999999983"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[68]" 
+		" -type \"float3\" 24.046522 2.23142720000000017 4.94711730000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[69]" 
+		" -type \"float3\" 24.210798 2.49954870000000007 4.29571910000000035"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[70]" 
+		" -type \"float3\" 24.210798 2.06081890000000012 4.55051849999999991"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[71]" 
+		" -type \"float3\" 24.210798 2.659312 3.69336680000000017"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[72]" 
+		" -type \"float3\" 23.466036 0.53296882000000001 -0.32985765"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[73]" 
+		" -type \"float3\" 23.79044 0.69040519 -0.75314462000000004"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[74]" 
+		" -type \"float3\" 23.805107 1.04791509999999999 -0.95436215000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[75]" 
+		" -type \"float3\" 19.205973 0.53296882000000001 -0.38723740000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[76]" 
+		" -type \"float3\" 18.919317 0.69033802 -0.77075475000000004"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[77]" 
+		" -type \"float3\" 18.921413 1.047915 -0.95436215000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[78]" 
+		" -type \"float3\" 18.515722 4.28029629999999983 -0.10304813"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[79]" 
+		" -type \"float3\" 18.441133 4.37749339999999965 -0.16529547"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[80]" 
+		" -type \"float3\" 18.296549 4.387444 -0.33777355999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[81]" 
+		" -type \"float3\" 24.42997 4.38744539999999983 -0.33777281999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[82]" 
+		" -type \"float3\" 24.285387 4.37749430000000039 -0.16529511999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[83]" 
+		" -type \"float3\" 24.210798 4.28029629999999983 -0.10304774"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[84]" 
+		" -type \"float3\" 23.486107 4.51541230000000038 -0.94530689999999995"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[85]" 
+		" -type \"float3\" 23.34939 4.48508550000000028 -1.0471686"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[86]" 
+		" -type \"float3\" 23.288992 4.36869569999999996 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[87]" 
+		" -type \"float3\" 19.237543 4.51486110000000007 -0.94316632"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[88]" 
+		" -type \"float3\" 19.376253 4.48324489999999987 -1.04651209999999995"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[89]" 
+		" -type \"float3\" 19.437529 4.3632363999999999 -1.09216580000000008"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[90]" 
+		" -type \"float3\" 24.6637 1.99425230000000009 -0.030940531"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[91]" 
+		" -type \"float3\" 24.743242 2.00844449999999997 0.10997440999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[92]" 
+		" -type \"float3\" 24.779705 2.09886460000000019 0.21462055999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[93]" 
+		" -type \"float3\" 24.571091 2.27212190000000014 -0.45347758999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[94]" 
+		" -type \"float3\" 24.540895 2.17929459999999997 -0.4481889"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[95]" 
+		" -type \"float3\" 24.45743 2.10891489999999981 -0.43356934000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[96]" 
+		" -type \"float3\" 23.868498 4.392262 -1.05645060000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[97]" 
+		" -type \"float3\" 23.857079 4.483851 -0.99264567999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[98]" 
+		" -type \"float3\" 23.832645 4.49638179999999998 -0.85609055000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[99]" 
+		" -type \"float3\" 24.771328 4.093637 0.75348227999999995"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[100]" 
+		" -type \"float3\" 24.729282 4.24338250000000006 0.72864848000000004"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[101]" 
+		" -type \"float3\" 24.627777 4.33311129999999967 0.58977610000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[102]" 
+		" -type \"float3\" 24.371216 4.41952750000000005 -0.39507267000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[103]" 
+		" -type \"float3\" 24.506666 4.40992929999999994 -0.43465152000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[104]" 
+		" -type \"float3\" 24.571091 4.31659080000000017 -0.45347758999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[105]" 
+		" -type \"float3\" 17.946814 2.098865 0.21461854999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[106]" 
+		" -type \"float3\" 17.983278 2.00844479999999992 0.10997306"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[107]" 
+		" -type \"float3\" 18.062819 1.99425239999999993 -0.030941194000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[108]" 
+		" -type \"float3\" 18.269091 2.10891489999999981 -0.43357071000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[109]" 
+		" -type \"float3\" 18.185625 2.17929480000000009 -0.44819027"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[110]" 
+		" -type \"float3\" 18.155428 2.27212190000000014 -0.45347962000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[111]" 
+		" -type \"float3\" 18.893875 4.49638179999999998 -0.85609055000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[112]" 
+		" -type \"float3\" 18.86944 4.483851 -0.99264567999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[113]" 
+		" -type \"float3\" 18.858023 4.392262 -1.05645060000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[114]" 
+		" -type \"float3\" 18.098742 4.33311080000000004 0.58977747000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[115]" 
+		" -type \"float3\" 17.997234 4.24338250000000006 0.72864848000000004"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[116]" 
+		" -type \"float3\" 17.955189 4.093637 0.75348227999999995"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[117]" 
+		" -type \"float3\" 18.155428 4.3165912999999998 -0.45347962000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[118]" 
+		" -type \"float3\" 18.219854 4.40992929999999994 -0.43465424000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[119]" 
+		" -type \"float3\" 18.355301 4.41952750000000005 -0.39507334999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[120]" 
+		" -type \"float3\" 24.210798 3.99577470000000012 1.24664930000000007"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[121]" 
+		" -type \"float3\" 24.261131 4.07679409999999987 1.3038917000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[122]" 
+		" -type \"float3\" 24.382946 4.10953809999999997 1.33094660000000009"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[123]" 
+		" -type \"float3\" 24.894567 1.90669420000000001 0.70998775999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[124]" 
+		" -type \"float3\" 24.843685 1.81799810000000006 0.68242776000000005"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[125]" 
+		" -type \"float3\" 24.720852 1.78199709999999989 0.66758483999999996"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[126]" 
+		" -type \"float3\" 24.714489 4.107132 1.34211520000000006"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[127]" 
+		" -type \"float3\" 24.841795 4.06770940000000003 1.33523079999999994"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[128]" 
+		" -type \"float3\" 24.894529 3.97438070000000021 1.31003369999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[129]" 
+		" -type \"float3\" 18.515722 3.99650550000000004 1.24714790000000009"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[130]" 
+		" -type \"float3\" 18.465389 4.07700819999999986 1.30403720000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[131]" 
+		" -type \"float3\" 18.343573 4.10953809999999997 1.33094660000000009"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[132]" 
+		" -type \"float3\" 18.012028 4.107132 1.34211389999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[133]" 
+		" -type \"float3\" 17.884722 4.06770940000000003 1.33523009999999998"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[134]" 
+		" -type \"float3\" 17.831989 3.97438139999999995 1.3100324000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[135]" 
+		" -type \"float3\" 17.831953 1.90663610000000006 0.70997100999999996"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[136]" 
+		" -type \"float3\" 17.882809 1.81798090000000001 0.68242365000000005"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[137]" 
+		" -type \"float3\" 18.005587 1.78199660000000004 0.66758751999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[138]" 
+		" -type \"float3\" 24.074732 2.26236840000000017 -0.97265393"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[139]" 
+		" -type \"float3\" 24.320812 2.36935019999999996 -0.87267618999999996"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[140]" 
+		" -type \"float3\" 24.247267 2.28765030000000014 -0.90255213000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[141]" 
+		" -type \"float3\" 24.179411 4.47578669999999956 -0.71493715000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[142]" 
+		" -type \"float3\" 24.275881 4.46433780000000002 -0.82255191000000005"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[143]" 
+		" -type \"float3\" 24.320911 4.37281079999999989 -0.87278825000000004"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[144]" 
+		" -type \"float3\" 18.547106 4.47578669999999956 -0.71493786999999998"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[145]" 
+		" -type \"float3\" 18.45064 4.46433780000000002 -0.82255255999999999"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[146]" 
+		" -type \"float3\" 18.405609 4.3728113000000004 -0.87278891000000003"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[147]" 
+		" -type \"float3\" 18.47925 2.28765030000000014 -0.90255213000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[148]" 
+		" -type \"float3\" 18.405704 2.36935019999999996 -0.87267618999999996"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[149]" 
+		" -type \"float3\" 18.651787 2.26236840000000017 -0.97265393"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[150]" 
+		" -type \"float3\" 24.40205 1.86877789999999999 4.37010770000000015"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[151]" 
+		" -type \"float3\" 24.271517 1.77382 4.33014489999999963"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[152]" 
+		" -type \"float3\" 24.214485 1.73885850000000008 4.20442909999999959"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[153]" 
+		" -type \"float3\" 24.214495 3.04666879999999995 4.20985220000000027"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[154]" 
+		" -type \"float3\" 24.26688 2.9932262999999999 4.33390240000000038"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[155]" 
+		" -type \"float3\" 24.39131 2.95666550000000017 4.37161679999999997"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[156]" 
+		" -type \"float3\" 24.512064 1.8630042 4.35465150000000012"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[157]" 
+		" -type \"float3\" 24.539799 1.77086889999999997 4.29569389999999984"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[158]" 
+		" -type \"float3\" 24.557127 1.73881839999999999 4.16200830000000011"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[159]" 
+		" -type \"float3\" 18.318895 1.8729830999999999 4.36932369999999981"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[160]" 
+		" -type \"float3\" 18.453283 1.7751174999999999 4.32987829999999985"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[161]" 
+		" -type \"float3\" 18.512035 1.73885850000000008 4.20443009999999973"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[162]" 
+		" -type \"float3\" 18.335222 2.9566669000000001 4.3716172999999996"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[163]" 
+		" -type \"float3\" 18.459644 2.99324039999999991 4.33390569999999986"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[164]" 
+		" -type \"float3\" 18.512026 3.04671570000000003 4.20985790000000026"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[165]" 
+		" -type \"float3\" 18.169388 1.73881839999999999 4.16200779999999959"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[166]" 
+		" -type \"float3\" 18.186718 1.77086849999999996 4.29569389999999984"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[167]" 
+		" -type \"float3\" 18.214453 1.86300360000000009 4.35465150000000012"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[168]" 
+		" -type \"float3\" 24.4266 3.00968239999999998 4.3666577000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[169]" 
+		" -type \"float3\" 24.401781 3.10939789999999983 4.33180809999999994"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[170]" 
+		" -type \"float3\" 24.392229 3.17787189999999997 4.23083450000000028"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[171]" 
+		" -type \"float3\" 24.562672 3.17681190000000013 4.2122655"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[172]" 
+		" -type \"float3\" 24.549316 3.111177 4.31292679999999962"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[173]" 
+		" -type \"float3\" 24.524258 3.01662350000000012 4.35293910000000039"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[174]" 
+		" -type \"float3\" 24.563295 2.96829939999999981 4.34745410000000021"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[175]" 
+		" -type \"float3\" 24.680668 2.99946190000000001 4.28907349999999976"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[176]" 
+		" -type \"float3\" 24.730991 3.04498980000000019 4.17395210000000016"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[177]" 
+		" -type \"float3\" 24.73185 1.86826910000000002 4.157505"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[178]" 
+		" -type \"float3\" 24.677994 1.86822090000000007 4.28423689999999979"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[179]" 
+		" -type \"float3\" 24.555098 1.88366189999999989 4.3486066000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[180]" 
+		" -type \"float3\" 18.33429 3.17787189999999997 4.23083450000000028"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[181]" 
+		" -type \"float3\" 18.324734 3.10939809999999994 4.33180809999999994"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[182]" 
+		" -type \"float3\" 18.299917 3.00968269999999993 4.3666577000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[183]" 
+		" -type \"float3\" 18.202261 3.01662350000000012 4.35293910000000039"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[184]" 
+		" -type \"float3\" 18.177202 3.111177 4.31292679999999962"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[185]" 
+		" -type \"float3\" 18.163849 3.17681190000000013 4.2122655"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[186]" 
+		" -type \"float3\" 17.995527 3.04499010000000014 4.17395159999999965"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[187]" 
+		" -type \"float3\" 18.045853 2.99946210000000013 4.28907349999999976"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[188]" 
+		" -type \"float3\" 18.163223 2.96829959999999993 4.34745410000000021"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[189]" 
+		" -type \"float3\" 18.171423 1.88366169999999999 4.34860609999999959"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[190]" 
+		" -type \"float3\" 18.048527 1.86822010000000005 4.28423689999999979"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[191]" 
+		" -type \"float3\" 17.994669 1.86826589999999992 4.157505"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[192]" 
+		" -type \"float3\" 24.423569 3.01096960000000013 4.367084"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[193]" 
+		" -type \"float3\" 24.311563 3.07954840000000019 4.33822010000000002"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[194]" 
+		" -type \"float3\" 24.266558 3.13992169999999993 4.23315719999999995"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[195]" 
+		" -type \"float3\" 24.54421 1.86286350000000001 4.35013580000000033"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[196]" 
+		" -type \"float3\" 24.637535 1.79683740000000003 4.28642460000000014"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[197]" 
+		" -type \"float3\" 24.680845 1.77646890000000002 4.15551470000000034"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[198]" 
+		" -type \"float3\" 24.558279 3.00567720000000005 4.34815929999999984"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[199]" 
+		" -type \"float3\" 24.644709 3.079263 4.29806419999999978"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[200]" 
+		" -type \"float3\" 24.681379 3.13850449999999981 4.19097279999999994"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[201]" 
+		" -type \"float3\" 18.299885 3.00952580000000003 4.36665339999999969"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[202]" 
+		" -type \"float3\" 18.414082 3.07944659999999981 4.33722350000000034"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[203]" 
+		" -type \"float3\" 18.459967 3.14100959999999985 4.2301025000000001"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[204]" 
+		" -type \"float3\" 18.177692 2.99898670000000012 4.34948680000000021"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[205]" 
+		" -type \"float3\" 18.084368 3.07745030000000019 4.29843240000000026"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[206]" 
+		" -type \"float3\" 18.045137 3.13850449999999981 4.19097230000000032"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[207]" 
+		" -type \"float3\" 18.192205 1.87040910000000005 4.35152629999999974"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[208]" 
+		" -type \"float3\" 18.091837 1.79901120000000003 4.28682989999999986"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27" "pnts[209]" 
+		" -type \"float3\" 18.045671 1.776468 4.15551519999999996"
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube28" "translate" " -type \"double3\" -45.97931235593539157 -1.953608088633072 -1.95231438886115738"
 		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube28" "rotate" " -type \"double3\" 0 28.5741490719435447 0"
+		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube28" "scale" " -type \"double3\" 0.56285800820705256 0.69198954399141588 0.56285800820705256"
+		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube28" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube28|yleana_sofa:pCubeShape28" "uvPivot" 
+		" -type \"double2\" 0.41149652004241943 0.074287116527557373"
 		2 "|Room|yleana_sofa:sofa|yleana_sofa:pCube28|yleana_sofa:pCubeShape28" "uvSet[0].uvSetName" 
 		" -type \"string\" \"map1\""
 		5 4 "yleana_sofaRN" "|Room|yleana_sofa:sofa|yleana_sofa:pCube27|yleana_sofa:pCubeShape27.inMesh" 
@@ -4791,8 +5232,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "polyEditEdgeFlow1.out" "yleana_sofaRN.phl[1]";
 connectAttr "polyEditEdgeFlow2.out" "yleana_sofaRN.phl[2]";
 connectAttr "groupId74.id" "Flor1Shape.iog.og[0].gid";
