@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Unit_1_Table,Chair,Floor.ma
-//Last modified: Fri, Feb 27, 2026 11:34:32 PM
+//Last modified: Fri, Feb 27, 2026 11:36:37 PM
 //Codeset: 1252
 file -rdi 1 -ns "Yleana_table_and_rug" -rfn "Yleana_table_and_rugRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana table and rug.ma";
@@ -48,19 +48,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "A3E33C22-43F4-F9A7-A5F2-509DBB71F2FB";
+fileInfo "UUID" "5AB593F2-40BE-9325-7F72-5D90519A97CB";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "741192EF-4E13-F723-FC32-BC96EAF4048C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 26.156677437955093 31.536962287518385 47.927866061373273 ;
-	setAttr ".r" -type "double3" -25.799999999984973 -4291.9999999996526 -9.0055024420400421e-16 ;
+	setAttr ".t" -type "double3" 27.893793190024141 25.388673407581329 50.175267883760071 ;
+	setAttr ".r" -type "double3" -17.999999999985711 -4293.5999999993674 0 ;
 	setAttr ".rpt" -type "double3" 7.3185074347254156e-16 5.5610988891110226e-16 -2.2582167677923306e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E91ACFE6-4164-8B36-18AA-A1818D26E18E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 84.731029514956418;
+	setAttr ".coi" 86.28925780364699;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -120,8 +120,8 @@ createNode transform -n "Room";
 	rename -uid "D91B945C-4818-A59F-9529-F0996EABEF5A";
 createNode transform -n "Bistro_lights" -p "|Room";
 	rename -uid "AC5F24AF-4F6A-A37D-EB0D-B5A32683975E";
-	setAttr ".t" -type "double3" -2.2509344566806426 8.4896615833486226 -10.545140873500339 ;
-	setAttr ".r" -type "double3" 0 0 -1.3614482178782747 ;
+	setAttr ".t" -type "double3" -2.2509344566806426 8.3505204271083713 -10.414818623111888 ;
+	setAttr ".r" -type "double3" -3.0896171780801391 6.2120208622334296e-18 -1.3614482178782756 ;
 	setAttr ".s" -type "double3" 0.35328423015093335 0.35328423015093335 0.35328423015093335 ;
 createNode transform -n "Room" -p "|Room";
 	rename -uid "3E9DA9DC-47CB-3503-0DBB-E1B3A3D5C500";
@@ -3411,7 +3411,7 @@ createNode transform -n "sofa" -p "|Room|Room";
 	setAttr ".rp" -type "double3" 21 0 -11 ;
 	setAttr ".sp" -type "double3" 21 0 -11 ;
 createNode fosterParent -n "yleana_sofaRNfosterParent1";
-	rename -uid "D2559E0C-49F0-66F0-BF52-7EB0F3755BAB";
+	rename -uid "5B87C610-4D3A-1B21-6D3F-FAA01A961409";
 createNode mesh -n "yleana_sofa:polySurfaceShape2" -p "yleana_sofaRNfosterParent1";
 	rename -uid "728650CA-404D-C047-784F-45A335276FD0";
 	setAttr -k off ".v";
