@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: bistro lights.ma
-//Last modified: Fri, Feb 27, 2026 04:16:27 PM
+//Last modified: Fri, Feb 27, 2026 08:24:19 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "07EEC8B2-4D37-248F-CC83-5281C8709634";
+fileInfo "UUID" "F57171ED-48FE-A94D-68FB-A4BF584E9F2E";
 createNode transform -s -n "persp";
 	rename -uid "0DB38578-4C64-CFE2-A0B7-EBA40EE48EDB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.1843215114419037 18.202275267195215 45.725231197167105 ;
-	setAttr ".r" -type "double3" -11.138352729767375 -716.19999999986999 -3.4863966364028684e-16 ;
+	setAttr ".t" -type "double3" -17.759618947672816 23.521574345448137 27.120823241365834 ;
+	setAttr ".r" -type "double3" -29.138352729771839 -743.39999999979148 1.7327914196499495e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "24DF0F9C-4B80-451A-9873-808A7EB70EE3";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 41.418549347983593;
+	setAttr ".coi" 33.385001166948598;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -76,7 +76,9 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "curve1";
+createNode transform -n "group1";
+	rename -uid "AC52C9DC-4C62-B956-A9AF-5A82B6D14C7A";
+createNode transform -n "curve1" -p "group1";
 	rename -uid "12EC2FF8-4110-12FA-824B-A2BC0DEB3105";
 	setAttr ".t" -type "double3" 0 9.4823195437469305 0 ;
 createNode nurbsCurve -n "curveShape1" -p "curve1";
@@ -94,14 +96,16 @@ createNode nurbsCurve -n "curveShape1" -p "curve1";
 		12.108318325811934 -2.2322117703353053 0
 		15.388961056887322 3.6641887349834326 0
 		;
-createNode transform -n "pCylinder1";
+createNode transform -n "pCylinder1" -p "group1";
 	rename -uid "FF959A77-47B5-7EC0-A997-D883093651F2";
-	setAttr ".t" -type "double3" -14.116478903050199 11.420816126890491 1.7881393432617188e-07 ;
-	setAttr ".r" -type "double3" 0 0 6.8729823400770131 ;
-	setAttr ".s" -type "double3" 0.20678659758138843 0.20678659758138843 0.20678659758138843 ;
+	setAttr ".t" -type "double3" -14.098484980636876 12.271531331971412 2.6887418064166652e-08 ;
+	setAttr ".r" -type "double3" 0 0 6.8729823400770123 ;
+	setAttr ".s" -type "double3" 0.15036534018160863 0.15036534018160863 0.1503653401816086 ;
 	setAttr ".rp" -type "double3" -1.1920928955078125e-07 1 -1.7881393432617188e-07 ;
-	setAttr ".rpt" -type "double3" 1.8041124150158794e-16 -5.504798006317202e-14 0 ;
+	setAttr ".rpt" -type "double3" -0.1196686927714566 -0.0071861325308096632 0 ;
 	setAttr ".sp" -type "double3" -1.1920928955078125e-07 1 -1.7881393432617188e-07 ;
+	setAttr ".spt" -type "double3" 1.0128434417467014e-07 -0.84963465981839137 1.5192651626200521e-07 ;
+	setAttr ".it" no;
 createNode mesh -n "pCylinderShape1" -p "pCylinder1";
 	rename -uid "0BAA817C-48FA-20CF-8823-D693213558D4";
 	setAttr -k off ".v";
@@ -138,31 +142,6 @@ createNode polyCylinder -n "polyCylinder1";
 createNode deleteComponent -n "deleteComponent1";
 	rename -uid "CD56E4D8-40A0-AD37-3FDD-07A140724040";
 	setAttr ".dc" -type "componentList" 1 "f[0:39]";
-createNode polyExtrudeFace -n "polyExtrudeFace1";
-	rename -uid "18825D7B-42BF-63A2-878E-AFA36A0171A6";
-	setAttr ".ics" -type "componentList" 1 "f[0:19]";
-	setAttr ".ix" -type "matrix" 0.20507980226141115 0.0247192676065837 0 0 -0.0247192676065837 0.20507980226141115 0 0
-		 0 0 0.20656419701048243 0 -14.091759730205487 12.215736327575792 3.6936556758370832e-08 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -14.116479 12.420816 0.00010637729 ;
-	setAttr ".rs" 54920;
-	setAttr ".d" 30;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -14.244034360697375 12.258340230916223 -0.20635155325322449 ;
-	setAttr ".cbx" -type "double3" -13.988923689715133 12.583292071759484 0.2065643078201527 ;
-createNode polyTweak -n "polyTweak1";
-	rename -uid "4F865B12-40F9-D6D7-26E8-FEBCD429C92D";
-	setAttr ".uopa" yes;
-	setAttr -s 21 ".tk[0:20]" -type "float3"  -1.62364388 -0.67241144 1.1920929e-07
-		 -1.38115382 -0.57198739 1.1920929e-07 -1.0034674406 -0.41557288 -2.3841858e-07 -0.52755409
-		 -0.21847981 -2.3841858e-07 0.041856766 -0.0050454121 0.0010297298 0.56941038 0.21343291
-		 0.0010297298 1.003467083 0.41557276 0 1.38115335 0.57198727 1.1920929e-07 1.6236434
-		 0.67241096 0 1.7071991 0.70701504 -1.1641532e-10 1.6236434 0.67241096 -5.9604645e-08
-		 1.38115311 0.57198691 1.1920929e-07 1.0034669638 0.41557276 -2.3841858e-07 0.5275538
-		 0.21847939 -2.3841858e-07 -1.2429894e-07 -7.6273238e-08 2.3841858e-07 -0.52755398
-		 -0.21847939 0 -1.0034667253 -0.41557276 -2.3841858e-07 -1.38115311 -0.57198727 1.1920929e-07
-		 -1.62364268 -0.67241096 0 -1.7071991 -0.7070148 -1.1641532e-10 0.041856766 -0.0050454121
-		 0.0010297298;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "E5E1EF93-4FD4-2647-9AE7-1E83B58D8126";
 	setAttr ".b" -type "string" (
@@ -215,6 +194,31 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "C467EB02-4655-A3AF-B8FD-BD8C81374757";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode polyExtrudeFace -n "polyExtrudeFace1";
+	rename -uid "C101B9EF-4A77-6E4F-86B1-A195EF7CDC05";
+	setAttr ".ics" -type "componentList" 1 "f[0:19]";
+	setAttr ".ix" -type "matrix" 0.1492847970640781 0.017994023826479254 0 0 -0.017994023826479254 0.1492847970640781 0 0
+		 0 0 0.1503653401816086 0 -14.098484980636876 12.271531331971412 2.6887418064166652e-08 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -14.116479 12.420816 7.7435761e-05 ;
+	setAttr ".rs" 47435;
+	setAttr ".d" 30;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -14.209331036954078 12.302544210832133 -0.15021054931581318 ;
+	setAttr ".cbx" -type "double3" -14.023627011855011 12.539088078541004 0.15036542084386281 ;
+createNode polyTweak -n "polyTweak1";
+	rename -uid "24BF3ABF-4BF9-F81B-DF1B-49A11B3972DF";
+	setAttr ".uopa" yes;
+	setAttr -s 21 ".tk[0:20]" -type "float3"  -1.62364388 -0.67241144 1.1920929e-07
+		 -1.38115382 -0.57198739 1.1920929e-07 -1.0034674406 -0.41557288 -2.3841858e-07 -0.52755409
+		 -0.21847981 -2.3841858e-07 0.041856766 -0.0050454121 0.0010297298 0.56941038 0.21343291
+		 0.0010297298 1.003467083 0.41557276 0 1.38115335 0.57198727 1.1920929e-07 1.6236434
+		 0.67241096 0 1.7071991 0.70701504 -1.1641532e-10 1.6236434 0.67241096 -5.9604645e-08
+		 1.38115311 0.57198691 1.1920929e-07 1.0034669638 0.41557276 -2.3841858e-07 0.5275538
+		 0.21847939 -2.3841858e-07 -1.2429894e-07 -7.6273238e-08 2.3841858e-07 -0.52755398
+		 -0.21847939 0 -1.0034667253 -0.41557276 -2.3841858e-07 -1.38115311 -0.57198727 1.1920929e-07
+		 -1.62364268 -0.67241096 0 -1.7071991 -0.7070148 -1.1641532e-10 0.041856766 -0.0050454121
+		 0.0010297298;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
