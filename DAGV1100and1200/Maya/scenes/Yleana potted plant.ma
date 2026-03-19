@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Yleana potted plant.ma
-//Last modified: Tue, Mar 17, 2026 05:14:46 PM
+//Last modified: Wed, Mar 18, 2026 09:12:11 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "B387C76E-4100-71D1-3469-EAB648A47213";
+fileInfo "UUID" "15BACCA4-40B5-4879-F63B-E99ECCF31739";
 createNode transform -s -n "persp";
 	rename -uid "2A647129-42D6-E850-B6E7-73A12C50A830";
 	setAttr ".v" no;
@@ -20313,10 +20313,11 @@ createNode mesh -n "Plant_curve_practice:leafloftedSurface3Shape" -p "Plant_curv
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 2 ".uvst";
+	setAttr -s 3 ".uvst";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".uvst[1].uvsn" -type "string" "uvSet1";
-	setAttr ".cuvs" -type "string" "uvSet1";
+	setAttr ".uvst[2].uvsn" -type "string" "uvSet11";
+	setAttr ".cuvs" -type "string" "uvSet11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 createNode mesh -n "Plant_curve_practice:polySurfaceShape10" -p "Plant_curve_practice:leafloftedSurface3";
 	rename -uid "DDFA5259-40B0-0F91-5D66-A180961E82F5";
@@ -29627,6 +29628,16 @@ createNode polyTweakUV -n "polyTweakUV151";
 		 0.95088506 -0.069029413 0.95089853 -0.069560386 0.95120281 -0.069846548 0.95129359
 		 -0.069680542 1.24414515 -0.070203811 1.24646378 -0.076956175 1.25250149 -0.07556022;
 	setAttr ".uvs" -type "string" "uvSet11";
+createNode polyAutoProj -n "polyAutoProj29";
+	rename -uid "A46A1E7C-46C5-9881-5F00-5BA69E921D6D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:67]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".uvs" -type "string" "uvSet11";
+	setAttr ".s" -type "double3" 13.61188018321991 13.61188018321991 13.61188018321991 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -29720,7 +29731,8 @@ connectAttr "polyTweakUV140.out" "Plant_curve_practice:leafloftedSurface11Shape.
 		;
 connectAttr "polyTweakUV140.uvtk[0]" "Plant_curve_practice:leafloftedSurface11Shape.uvst[2].uvtw"
 		;
-connectAttr "polyMapDel41.out" "Plant_curve_practice:leafloftedSurface3Shape.i";
+connectAttr "polyAutoProj29.out" "Plant_curve_practice:leafloftedSurface3Shape.i"
+		;
 connectAttr "polyTweakUV28.out" "Plant_curve_practice:leafloftedSurface6Shape.i"
 		;
 connectAttr "polyTweakUV2.uvtk[0]" "Plant_curve_practice:leafloftedSurface6Shape.uvst[2].uvtw"
@@ -30172,6 +30184,9 @@ connectAttr "polyTweakUV149.out" "polyMapSewMove128.ip";
 connectAttr "polyMapSewMove128.out" "polyTweakUV150.ip";
 connectAttr "polyTweakUV150.out" "polyMapSewMove129.ip";
 connectAttr "polyMapSewMove129.out" "polyTweakUV151.ip";
+connectAttr "polyMapDel41.out" "polyAutoProj29.ip";
+connectAttr "Plant_curve_practice:leafloftedSurface3Shape.wm" "polyAutoProj29.mp"
+		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Plant_curve_practice:loftedSurface2leafShape.iog" ":initialShadingGroup.dsm"
 		 -na;
