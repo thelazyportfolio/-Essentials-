@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Yleana potted plant.ma
-//Last modified: Fri, Mar 20, 2026 01:38:10 PM
+//Last modified: Fri, Mar 20, 2026 01:39:15 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "B5812154-4BC7-B0D5-EAD0-C493DD376F91";
+fileInfo "UUID" "AEF65727-416F-47EA-D150-928ED5E7FD80";
 createNode transform -s -n "persp";
 	rename -uid "2A647129-42D6-E850-B6E7-73A12C50A830";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 50.743931565230049 18.914515991663556 17.761208357787424 ;
-	setAttr ".r" -type "double3" 354.26164726126905 1147.7999999995609 0 ;
+	setAttr ".t" -type "double3" 15.919003599576754 -16.111917888856034 21.474222375506102 ;
+	setAttr ".r" -type "double3" 406.46164726127671 1109.3999999995567 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FC10726E-415F-3059-A1ED-8E80A4081381";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 49.212070586837505;
+	setAttr ".coi" 32.333844872675016;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -718,11 +718,11 @@ createNode mesh -n "Plant_curve_practice:revolvedSurface1Shape" -p "Plant_curve_
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" -0.1783038976678849 0.41768668477660387 ;
-	setAttr -s 2 ".uvst";
+	setAttr -s 3 ".uvst";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".uvst[1].uvsn" -type "string" "uvSet1";
-	setAttr ".cuvs" -type "string" "uvSet1";
+	setAttr ".uvst[2].uvsn" -type "string" "uvSet11";
+	setAttr ".cuvs" -type "string" "uvSet11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 createNode mesh -n "Plant_curve_practice:polySurfaceShape1" -p "Plant_curve_practice:revolvedSurface1";
 	rename -uid "06EA3930-46FF-CADA-41B8-BEB83A74733B";
@@ -31672,6 +31672,16 @@ createNode polyTweakUV -n "polyTweakUV185";
 		 -0.0066698194 0.0064126551 -0.0054427385 0.0059907436 -0.0072875619 0.0067097545
 		 -0.0043760538 0.0059929192 -0.0089130104 0.0073684454 -0.011331931 0.0074157119 -0.011291244;
 	setAttr ".uvs" -type "string" "uvSet11";
+createNode polyAutoProj -n "polyAutoProj32";
+	rename -uid "1B4E7217-4F70-C3E8-358D-388BE5ABA0DA";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:3791]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".uvs" -type "string" "uvSet11";
+	setAttr ".s" -type "double3" 14.345578134059906 14.345578134059906 14.345578134059906 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -31727,7 +31737,7 @@ connectAttr "polyTweakUV110.out" "Plant_curve_practice:leafloftedSurface9Shape.i
 		;
 connectAttr "polyTweakUV110.uvtk[0]" "Plant_curve_practice:leafloftedSurface9Shape.uvst[2].uvtw"
 		;
-connectAttr "polyMapDel38.out" "Plant_curve_practice:revolvedSurface1Shape.i";
+connectAttr "polyAutoProj32.out" "Plant_curve_practice:revolvedSurface1Shape.i";
 connectAttr "polyTweakUV1.uvtk[0]" "Plant_curve_practice:revolvedSurface1Shape.uvst[1].uvtw"
 		;
 connectAttr "polyTweakUV34.out" "Plant_curve_practice:leafloftedSurface10Shape.i"
@@ -32303,6 +32313,8 @@ connectAttr "polyTweakUV183.out" "polyMapSewMove156.ip";
 connectAttr "polyMapSewMove156.out" "polyTweakUV184.ip";
 connectAttr "polyTweakUV184.out" "polyMapSewMove157.ip";
 connectAttr "polyMapSewMove157.out" "polyTweakUV185.ip";
+connectAttr "polyMapDel38.out" "polyAutoProj32.ip";
+connectAttr "Plant_curve_practice:revolvedSurface1Shape.wm" "polyAutoProj32.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Plant_curve_practice:loftedSurface2leafShape.iog" ":initialShadingGroup.dsm"
 		 -na;
