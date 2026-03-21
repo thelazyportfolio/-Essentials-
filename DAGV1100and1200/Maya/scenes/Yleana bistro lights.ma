@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Yleana bistro lights.ma
-//Last modified: Fri, Mar 20, 2026 07:40:43 PM
+//Last modified: Fri, Mar 20, 2026 07:52:01 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "71BB3520-40AE-37A9-FB9D-2999BE35BFF3";
+fileInfo "UUID" "BF0E1383-4ED7-8E37-3E73-7C80F27FCB44";
 createNode transform -n "Bottom_string_lights";
 	rename -uid "26A1C7D8-4D44-52AD-0D1E-ACA56EF12BAD";
 createNode transform -n "string2" -p "Bottom_string_lights";
@@ -18264,13 +18264,13 @@ createNode mesh -n "pSphereShape1" -p "|top_string_lights|Light6|pSphere1";
 createNode transform -s -n "persp";
 	rename -uid "05A3830A-4392-ACC5-5FDA-439C68C8CB53";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 24.150354984560725 23.719342545230745 48.227144500518079 ;
-	setAttr ".r" -type "double3" -23.73835272960352 26.599999999999866 -8.892634375658866e-16 ;
+	setAttr ".t" -type "double3" 11.535397852589497 11.900649251503909 64.943612864117938 ;
+	setAttr ".r" -type "double3" 2.061647270399154 11.399999999999023 -2.5348173130279286e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "29B91038-46BA-E269-0207-FE9194FC8E92";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 58.921170417193231;
+	setAttr ".coi" 59.790839916142936;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
