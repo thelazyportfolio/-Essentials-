@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Unit_1_Table,Chair,Floor.ma
-//Last modified: Sat, Mar 28, 2026 09:40:28 PM
+//Last modified: Sun, Mar 29, 2026 09:30:10 PM
 //Codeset: 1252
 file -rdi 1 -ns "Yleana_table_and_rug" -rfn "Yleana_table_and_rugRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Yleana table and rug.ma";
@@ -42,14 +42,13 @@ requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.4.2";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "E82D07E6-4753-DEB3-E6CF-2199CE57598E";
+fileInfo "UUID" "197FD635-48A4-100A-4689-51B50AF398B2";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "741192EF-4E13-F723-FC32-BC96EAF4048C";
@@ -24540,6 +24539,18 @@ createNode transform -n "polySurface1" -p "|Room1|Room|Polysurface_stuff";
 createNode mesh -n "polySurfaceShape1" -p "|Room1|Room|Polysurface_stuff|polySurface1";
 	rename -uid "AF185AA4-4864-6637-7F44-9AB6615DA8EF";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.88554046830611921 0.8854634329954898 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape3" -p "|Room1|Room|Polysurface_stuff|polySurface1";
+	rename -uid "46AB8C99-4440-6F7F-F991-0994405A1D85";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 5 "f[0:7]" "f[68:69]" "f[108:120]" "f[68:69]" "f[108:120]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -57504,7 +57515,7 @@ createNode mesh -n "polySurfaceShape2" -p "|Room1|Room|sofa1|pCube28";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "yleana_sofaRNfosterParent1";
-	rename -uid "4552A08C-4CB1-132E-ABB1-97A30E742E27";
+	rename -uid "F303DCEF-4785-7D68-3EE1-B5B97BC74AD8";
 createNode mesh -n "yleana_sofa:polySurfaceShape2" -p "yleana_sofaRNfosterParent1";
 	rename -uid "728650CA-404D-C047-784F-45A335276FD0";
 	setAttr -k off ".v";
@@ -58473,20 +58484,20 @@ createNode mesh -n "yleana_sofa:polySurfaceShape1" -p "yleana_sofaRNfosterParent
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "55886C24-4497-739D-1AA5-69A3F1490617";
+	rename -uid "36B0DAEE-4A82-D65C-7ECD-6A8746CAFD54";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "AC7EC92A-42B5-9D12-27A8-22A8914969FE";
+	rename -uid "4B922DF9-4133-A554-E9BD-8DAB0B8E284F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "AEEB20DD-40C4-0A47-F4E1-9F867BC76D61";
+	rename -uid "E04A482D-4419-F126-7BAC-F28557821EC5";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "772F7B17-43FD-83AE-FA97-9E848EA92D48";
+	rename -uid "2471AA51-452E-DF85-CCB4-53AA2D22EDDC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "06264E6B-4B40-4962-3D9C-0D8517ACB0C8";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B1009EFE-446F-0171-D757-DD92F61B2768";
+	rename -uid "56DD2152-4E55-6CCB-1FCF-7FBBE504B81B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1CB2CF0F-4F56-91A6-0082-4EABBA2D6A92";
 	setAttr ".g" yes;
@@ -58496,15 +58507,15 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 374\n            -height 363\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 373\n            -height 362\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 374\n            -height 362\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 753\n            -height 772\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -58582,14 +58593,14 @@ createNode reference -n "Yleana_table_and_rugRN";
 		0 "|Yleana_table_and_rug:Table_and_rug" "|Room|Room" "-s -r "
 		2 "|Room|Room|Yleana_table_and_rug:Table_and_rug" "translate" " -type \"double3\" 2.34480451695179237 -0.31185900920232701 5.63873459966215229"
 		
+		3 "Yleana_table_and_rug:groupId1.message" ":initialShadingGroup.groupNodes" 
+		"-na"
 		3 "Yleana_table_and_rug:groupId1.groupId" "|Room|Room|Yleana_table_and_rug:Table_and_rug|Yleana_table_and_rug:Table_and_rugShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|Room|Room|Yleana_table_and_rug:Table_and_rug|Yleana_table_and_rug:Table_and_rugShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|Room|Room|Yleana_table_and_rug:Table_and_rug|Yleana_table_and_rug:Table_and_rugShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "Yleana_table_and_rug:groupId1.message" ":initialShadingGroup.groupNodes" 
-		"-na"
 		5 3 "Yleana_table_and_rugRN" "|Room|Room|Yleana_table_and_rug:Table_and_rug|Yleana_table_and_rug:Table_and_rugShape.instObjGroups" 
 		"Yleana_table_and_rugRN.placeHolderList[1]" "";
 	setAttr ".ptag" -type "string" "";
@@ -58631,9 +58642,9 @@ createNode reference -n "yleana_lampRN";
 		
 		2 "|Room|Room|yleana_lamp:Lamp|yleana_lamp:pSphere5" "translate" " -type \"double3\" -8.9432428445456349 0.56912757149259363 9.50927673651667149"
 		
-		3 "|Room|Room|yleana_lamp:Lamp|yleana_lamp:pSphere3|yleana_lamp:pSphereShape3.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|yleana_lamp:Lamp|yleana_lamp:pSphere5|yleana_lamp:pSphereShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_lamp:Lamp|yleana_lamp:pSphere3|yleana_lamp:pSphereShape3.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|yleana_lamp:Lamp|yleana_lamp:pSphere4|yleana_lamp:pSphereShape4.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -58659,9 +58670,9 @@ createNode reference -n "Yleana_platesRN";
 		
 		2 "|Room|Room|Yleana_plates:Plates|Yleana_plates:plate" "translate" " -type \"double3\" 1.63465207531292123 -1.89163165832044466 0.59787344233655304"
 		
-		3 "|Room|Room|Yleana_plates:Plates|Yleana_plates:plate|Yleana_plates:plateShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Yleana_plates:Plates|Yleana_plates:plate_1|Yleana_plates:plate_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Yleana_plates:Plates|Yleana_plates:plate|Yleana_plates:plateShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "Yleana_platesRN" "|Room|Room|Yleana_plates:Plates|Yleana_plates:plate_1|Yleana_plates:plate_Shape1.instObjGroups" 
 		"Yleana_platesRN.placeHolderList[1]" ":initialShadingGroup.dsm"
@@ -58787,59 +58798,13 @@ createNode reference -n "yleana_bookshelfRN";
 		"translate" " -type \"double3\" 0 0.56912757149259363 0"
 		2 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube39" 
 		"translate" " -type \"double3\" 0 0.56912757149259363 0"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube29|yleana_bookshelf:pCubeShape29.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube32|yleana_bookshelf:pCubeShape32.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube30|yleana_bookshelf:pCubeShape30.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube8|yleana_bookshelf:pCubeShape8.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube10|yleana_bookshelf:pCubeShape10.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube9|yleana_bookshelf:pCubeShape9.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube24|yleana_bookshelf:pCubeShape24.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube27|yleana_bookshelf:pCubeShape27.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube23|yleana_bookshelf:pCubeShape23.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube17|yleana_bookshelf:pCubeShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube7|yleana_bookshelf:pCubeShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube5|yleana_bookshelf:pCubeShape5.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube21|yleana_bookshelf:pCubeShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube20|yleana_bookshelf:pCubeShape20.instObjGroups" 
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube30|yleana_bookshelf:pCubeShape30.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube37|yleana_bookshelf:pCubeShape37.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube22|yleana_bookshelf:pCubeShape22.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube4|yleana_bookshelf:pCubeShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube11|yleana_bookshelf:pCubeShape11.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube31|yleana_bookshelf:pCubeShape31.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube28|yleana_bookshelf:pCubeShape28.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube15|yleana_bookshelf:pCubeShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "yleana_bookshelf:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube39|yleana_bookshelf:pCubeShape39.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube33|yleana_bookshelf:pCubeShape33.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube18|yleana_bookshelf:pCubeShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube13|yleana_bookshelf:pCubeShape13.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube36|yleana_bookshelf:pCubeShape36.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "yleana_bookshelf:groupId1.groupId" "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:bookshelf|yleana_bookshelf:bookshelfShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -58847,23 +58812,69 @@ createNode reference -n "yleana_bookshelfRN";
 		""
 		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:bookshelf|yleana_bookshelf:bookshelfShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube25|yleana_bookshelf:pCubeShape25.instObjGroups" 
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube15|yleana_bookshelf:pCubeShape15.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube14|yleana_bookshelf:pCubeShape14.instObjGroups" 
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube7|yleana_bookshelf:pCubeShape7.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube19|yleana_bookshelf:pCubeShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube38|yleana_bookshelf:pCubeShape38.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube35|yleana_bookshelf:pCubeShape35.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube6|yleana_bookshelf:pCubeShape6.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube34|yleana_bookshelf:pCubeShape34.instObjGroups" 
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube9|yleana_bookshelf:pCubeShape9.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube12|yleana_bookshelf:pCubeShape12.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube21|yleana_bookshelf:pCubeShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube25|yleana_bookshelf:pCubeShape25.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube8|yleana_bookshelf:pCubeShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube38|yleana_bookshelf:pCubeShape38.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube14|yleana_bookshelf:pCubeShape14.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube20|yleana_bookshelf:pCubeShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube28|yleana_bookshelf:pCubeShape28.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube10|yleana_bookshelf:pCubeShape10.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube29|yleana_bookshelf:pCubeShape29.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube35|yleana_bookshelf:pCubeShape35.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube19|yleana_bookshelf:pCubeShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube16|yleana_bookshelf:pCubeShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube31|yleana_bookshelf:pCubeShape31.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube13|yleana_bookshelf:pCubeShape13.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube34|yleana_bookshelf:pCubeShape34.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube6|yleana_bookshelf:pCubeShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube17|yleana_bookshelf:pCubeShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube27|yleana_bookshelf:pCubeShape27.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube24|yleana_bookshelf:pCubeShape24.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube4|yleana_bookshelf:pCubeShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube18|yleana_bookshelf:pCubeShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube33|yleana_bookshelf:pCubeShape33.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube32|yleana_bookshelf:pCubeShape32.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube11|yleana_bookshelf:pCubeShape11.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube39|yleana_bookshelf:pCubeShape39.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube36|yleana_bookshelf:pCubeShape36.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "yleana_bookshelf:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:pCube23|yleana_bookshelf:pCubeShape23.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "yleana_bookshelfRN" "|Room|Room|yleana_bookshelf:Bookshelf|yleana_bookshelf:Bookshelf|yleana_bookshelf:bookshelf|yleana_bookshelf:bookshelfShape.instObjGroups" 
 		"yleana_bookshelfRN.placeHolderList[1]" ""
@@ -58996,37 +59007,37 @@ createNode reference -n "Yleana_potted_plantRN";
 		"-s -r "
 		2 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface7" 
 		"rotate" " -type \"double3\" 0 -23.42958264867809248 0"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface13|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface13Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface14|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface14Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface7|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface7Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface9|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface9Shape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:revolvedSurface1|Yleana_potted_plant:Plant_curve_practice:revolvedSurface1Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface3|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface3Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface10|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface10Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface15|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface15Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:loftedSurface2leaf|Yleana_potted_plant:Plant_curve_practice:loftedSurface2leafShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface5|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface5Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface11|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface11Shape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface6|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface6Shape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface4|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface4Shape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface10|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface10Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:pSphere1|Yleana_potted_plant:Plant_curve_practice:pSphere1Shape.instObjGroups" 
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface12|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface12Shape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface8|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface8Shape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface14|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface14Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface13|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface13Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface11|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface11Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface7|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface7Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:revolvedSurface1|Yleana_potted_plant:Plant_curve_practice:revolvedSurface1Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface12|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface12Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:loftedSurface2leaf|Yleana_potted_plant:Plant_curve_practice:loftedSurface2leafShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface3|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface3Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface15|Yleana_potted_plant:Plant_curve_practice:leafloftedSurface15Shape.instObjGroups" 
+		3 "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:pSphere1|Yleana_potted_plant:Plant_curve_practice:pSphere1Shape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "Yleana_potted_plantRN" "|Room|Room|Potted_plant_reference|Yleana_potted_plant:Plant_curve_practice:loftedSurface2leaf|Yleana_potted_plant:Plant_curve_practice:loftedSurface2leafShape.instObjGroups" 
 		"Yleana_potted_plantRN.placeHolderList[1]" ":initialShadingGroup.dsm"
@@ -59094,13 +59105,13 @@ createNode reference -n "yleana_chair_improvedRN";
 		" -type \"double3\" -0.018137717195210065 0 -1.63455144628114524"
 		2 "|Room|Room|Improved_chair_reference|yleana_chair_improved:pCube32" "translate" 
 		" -type \"double3\" -0.018137717195210065 0 -1.63455144628114524"
-		3 "|Room|Room|Improved_chair_reference|yleana_chair_improved:pCube29|yleana_chair_improved:pCubeShape29.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Improved_chair_reference|yleana_chair_improved:pCube32|yleana_chair_improved:pCubeShape32.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Improved_chair_reference|yleana_chair_improved:pCube27|yleana_chair_improved:pCubeShape27.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Improved_chair_reference|yleana_chair_improved:pCube28|yleana_chair_improved:pCubeShape28.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Improved_chair_reference|yleana_chair_improved:pCube32|yleana_chair_improved:pCubeShape32.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Room|Improved_chair_reference|yleana_chair_improved:pCube29|yleana_chair_improved:pCubeShape29.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Improved_chair_reference|yleana_chair_improved:pCube31|yleana_chair_improved:pCubeShape31.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -59148,15 +59159,15 @@ createNode reference -n "yleana_chair_improvedRN1";
 		"translate" " -type \"double3\" 0.015951913161345782 0 1.63457423930249646"
 		2 "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube32" 
 		"translate" " -type \"double3\" 0.015951913161345782 0 1.63457423930249646"
+		3 "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube29|yleana_chair_improved1:pCubeShape29.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube27|yleana_chair_improved1:pCubeShape27.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube31|yleana_chair_improved1:pCubeShape31.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube32|yleana_chair_improved1:pCubeShape32.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube28|yleana_chair_improved1:pCubeShape28.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube29|yleana_chair_improved1:pCubeShape29.instObjGroups" 
+		3 "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube32|yleana_chair_improved1:pCubeShape32.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "yleana_chair_improvedRN1" "|Room|Room|Improved_chair_reference_2|yleana_chair_improved1:pCube27|yleana_chair_improved1:pCubeShape27.instObjGroups" 
 		"yleana_chair_improvedRN1.placeHolderList[1]" ":initialShadingGroup.dsm"
@@ -59293,53 +59304,53 @@ createNode reference -n "Yleana_bistro_lightsRN";
 		
 		0 "|Yleana_bistro_lights:top_string_lights" "|Room|Bistro_lights" "-s -r "
 		
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light2|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light1|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light7|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light10|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light5|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light3|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light6|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light7|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light9|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light5|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light4|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light8|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light6|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light9|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light10|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:string2|Yleana_bistro_lights:pCylinder1|Yleana_bistro_lights:pCylinderShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light2|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:string1|Yleana_bistro_lights:pCylinder1|Yleana_bistro_lights:pCylinderShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light3|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light8|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light7|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light1|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light5|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light10|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light9|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light3|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light10|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light4|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light4|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light6|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light5|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light9|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light2|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:string2|Yleana_bistro_lights:pCylinder1|Yleana_bistro_lights:pCylinderShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light2|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:Light8|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:string1|Yleana_bistro_lights:pCylinder1|Yleana_bistro_lights:pCylinderShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light1|Yleana_bistro_lights:pCylinder2|Yleana_bistro_lights:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light6|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light3|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Room|Bistro_lights|Yleana_bistro_lights:top_string_lights|Yleana_bistro_lights:Light1|Yleana_bistro_lights:pSphere1|Yleana_bistro_lights:pSphereShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "Yleana_bistro_lightsRN" "|Room|Bistro_lights|Yleana_bistro_lights:Bottom_string_lights|Yleana_bistro_lights:string2|Yleana_bistro_lights:pCylinder1|Yleana_bistro_lights:pCylinderShape1.instObjGroups" 
 		"Yleana_bistro_lightsRN.placeHolderList[1]" ":initialShadingGroup.dsm"
@@ -59533,23 +59544,26 @@ createNode groupId -n "groupId84";
 createNode groupId -n "groupId85";
 	rename -uid "2B0F7EE1-4571-508B-C60C-E582CC5BFE71";
 	setAttr ".ihi" 0;
+createNode polyTriangulate -n "polyTriangulate1";
+	rename -uid "D22983E7-4A50-CFCC-6B6E-868D3663539C";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "DBE2B864-4F38-7579-7553-E6A53F40B914";
+	rename -uid "105CC503-4452-53E9-6A52-85B9D1B78568";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -104.76190059904087 -1006.5475790510119 ;
-	setAttr ".tgi[0].vh" -type "double2" 1946.4284940844523 43.452379225738547 ;
+	setAttr ".tgi[0].vl" -type "double2" -104.16666252745554 -1007.7380551941828 ;
+	setAttr ".tgi[0].vh" -type "double2" 1947.023732156038 42.261903082567599 ;
 	setAttr -s 4 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 75.000007629394531;
-	setAttr ".tgi[0].ni[0].y" -167.85713195800781;
+	setAttr ".tgi[0].ni[0].x" 299.04763793945312;
+	setAttr ".tgi[0].ni[0].y" -9.2857275009155273;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" -26.190475463867188;
-	setAttr ".tgi[0].ni[1].y" -1.1904761791229248;
+	setAttr ".tgi[0].ni[1].x" 314.52383422851562;
+	setAttr ".tgi[0].ni[1].y" -331.90475463867188;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 314.52383422851562;
-	setAttr ".tgi[0].ni[2].y" -331.90475463867188;
+	setAttr ".tgi[0].ni[2].x" -26.190475463867188;
+	setAttr ".tgi[0].ni[2].y" -1.1904761791229248;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 299.04763793945312;
-	setAttr ".tgi[0].ni[3].y" -9.2857275009155273;
+	setAttr ".tgi[0].ni[3].x" 75.000007629394531;
+	setAttr ".tgi[0].ni[3].y" -167.85713195800781;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
@@ -59712,6 +59726,8 @@ connectAttr ":initialShadingGroup.mwc" "|Room|Room|Polysurface_stuff|polySurface
 connectAttr "groupId59.id" "|Room|Room|Polysurface_stuff|polySurface1|polySurfaceShape1.ciog.cog[0].cgid"
 		;
 connectAttr "groupId72.id" "|Room|Room|Polysurface_stuff|polySurface2|polySurfaceShape2.ciog.cog[0].cgid"
+		;
+connectAttr "polyTriangulate1.out" "|Room1|Room|Polysurface_stuff|polySurface1|polySurfaceShape1.i"
 		;
 connectAttr "groupId84.id" "|Room1|Room|Polysurface_stuff|pCube26|pCubeShape26.iog.og[0].gid"
 		;
@@ -59908,13 +59924,14 @@ connectAttr "place2dTexture1.o" "Colors_1.uv";
 connectAttr "place2dTexture1.ofs" "Colors_1.fs";
 connectAttr "polyEditEdgeFlow1.out" "polyTweakUV1.ip";
 connectAttr "polyEditEdgeFlow2.out" "polyTweakUV2.ip";
-connectAttr "Colors_1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "polySurfaceShape3.o" "polyTriangulate1.ip";
+connectAttr "lambert2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "lambert2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "Colors_1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
