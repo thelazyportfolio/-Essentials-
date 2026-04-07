@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: long rug.ma
-//Last modified: Tue, Apr 07, 2026 08:52:17 AM
+//Last modified: Tue, Apr 07, 2026 08:55:54 AM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "50DAADB7-431E-4A1B-7ED3-F0AB08623FE3";
+fileInfo "UUID" "C3766722-4887-7E7A-59FB-09BF5550EF5C";
 createNode transform -s -n "persp";
 	rename -uid "60F32DFF-405B-2B96-F768-2EA0386756E3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.27984977246762099 3.9035137360080747 -8.6497865295376606 ;
-	setAttr ".r" -type "double3" -26.138352729595582 -176.999999999989 0 ;
+	setAttr ".t" -type "double3" -2.1274702713992939 3.9586372696766734 -12.049120350098537 ;
+	setAttr ".r" -type "double3" -19.538352729578637 -169.39999999997414 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EEFDCB36-44B4-74D5-4658-45BB25A136A6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 10.029228627609534;
+	setAttr ".coi" 13.375887079044478;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -88,6 +88,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75985255837440491 1.014190673828125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -95,7 +96,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pCube2";
 	rename -uid "94EB6BE9-461E-B268-C1FC-52965E1A03BF";
-	setAttr ".t" -type "double3" 0 0.060624780203409417 0 ;
+	setAttr ".t" -type "double3" 0 0.06629143932665757 0 ;
 	setAttr ".s" -type "double3" 1.2921524495611834 0.021441411325672243 11.122539965228128 ;
 	setAttr ".rp" -type "double3" 0 -0.044887396222070594 0 ;
 	setAttr ".sp" -type "double3" 0 -0.77923300433287468 0 ;
@@ -312,6 +313,42 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "51FB5F43-4416-EDDC-0078-B0A3BE220C6D";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode polyTweakUV -n "polyTweakUV6";
+	rename -uid "9D2C5BE9-4E17-F895-A8D2-F88BF9FAAD58";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.086531907 0.021243082 0
+		 0 0.086810291 -0.2266147 0.0002784133 -0.24785778 0.23122114 0.63464427 0.1446892
+		 0.61340117 0.23149949 0.38678658 0.14496762 0.36554348 0.37591034 1.24804544 0.28937846
+		 1.22680235 0.86125898 -0.14441083 0.86153734 -0.3922686 -0.77472711 0.16565393 -0.77444869
+		 -0.08220385;
+createNode polyMapCut -n "polyMapCut1";
+	rename -uid "AA4D5829-40D9-2171-08DA-E3AC4B13FE07";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[3]";
+createNode polyTweakUV -n "polyTweakUV7";
+	rename -uid "91F28E56-477C-6A08-CE1F-04BC93B27AE0";
+	setAttr ".uopa" yes;
+	setAttr -s 16 ".uvtk[0:15]" -type "float2" 0.1312663 -0.0020663608 0.13264048
+		 0.018821478 0.13099259 -0.0020483881 0.13236672 0.018839449 -0.011003256 0.0072929859
+		 -0.0096291304 0.028180718 -0.01127702 0.0073109865 -0.0099028945 0.028198719 -0.15327281
+		 0.016652346 -0.15189868 0.037540197 0.14198184 0.16081725 0.14170802 0.16083521 0.12192506
+		 -0.14406227 0.12165117 -0.14404429 -0.01127702 0.0073109865 -0.0099028945 0.028198719;
+createNode polyMapSew -n "polyMapSew1";
+	rename -uid "B9BF5565-4679-BA49-9670-A6A12ECCEA5A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[7]";
+createNode polyMapSew -n "polyMapSew2";
+	rename -uid "729F3BB7-4E3D-5BED-4EEE-EE833CB309F6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+createNode polyTweakUV -n "polyTweakUV8";
+	rename -uid "8D55573A-424E-A05E-4E9D-00BA00F323E5";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.44075882 0.98082328 -0.75464165
+		 0.9786554 -0.44235539 0.97767383 -0.75307304 0.97546178 0.11523709 -0.58092487 -1.31723237
+		 -0.57508302 -0.4416725 -1.14378226 -0.75815922 -1.14067125 -0.44194666 -1.2709893
+		 -0.46065903 -1.27094889 -1.87824082 -0.01134048 0.67866933 -0.019662755 -0.44629022
+		 -1.14409757 -0.46038488 -1.14374197;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -362,7 +399,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "polyCube1.out" "pCubeShape1.i";
+connectAttr "polyTweakUV8.out" "pCubeShape1.i";
+connectAttr "polyTweakUV8.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
 connectAttr "polyTweakUV5.out" "pCubeShape2.i";
 connectAttr "polyTweakUV5.uvtk[0]" "pCubeShape2.uvst[1].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -382,6 +420,12 @@ connectAttr "polyTweakUV3.out" "polyMapSewMove3.ip";
 connectAttr "polyMapSewMove3.out" "polyTweakUV4.ip";
 connectAttr "polyTweakUV4.out" "polyMapSewMove4.ip";
 connectAttr "polyMapSewMove4.out" "polyTweakUV5.ip";
+connectAttr "polyCube1.out" "polyTweakUV6.ip";
+connectAttr "polyTweakUV6.out" "polyMapCut1.ip";
+connectAttr "polyMapCut1.out" "polyTweakUV7.ip";
+connectAttr "polyTweakUV7.out" "polyMapSew1.ip";
+connectAttr "polyMapSew1.out" "polyMapSew2.ip";
+connectAttr "polyMapSew2.out" "polyTweakUV8.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
