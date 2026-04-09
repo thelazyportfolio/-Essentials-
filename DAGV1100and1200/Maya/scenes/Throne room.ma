@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Throne room.ma
-//Last modified: Wed, Apr 08, 2026 09:21:22 PM
+//Last modified: Thu, Apr 09, 2026 10:24:15 AM
 //Codeset: 1252
 file -rdi 1 -ns "Gothic_Arch" -rfn "Gothic_ArchRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Gothic Arch.ma";
@@ -25,17 +25,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "2DD2FA7D-443A-1719-D3FE-33892ED4A161";
+fileInfo "UUID" "58DB6C31-4726-FB2F-79AB-318FFC13F333";
 createNode transform -s -n "persp";
 	rename -uid "D7F9D35C-44BE-328F-A263-D3BEBDF4E7BC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 29.488199962453479 16.25394437709928 35.118689870832895 ;
-	setAttr ".r" -type "double3" -9.938352737133096 1480.1999999999491 0 ;
+	setAttr ".t" -type "double3" 10.223388764331979 36.329571661647243 49.810466510904988 ;
+	setAttr ".r" -type "double3" -29.138352737229955 1451.3999999998582 8.1114154016853532e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3F98AA2C-46B8-18EA-98F7-B59E81B44840";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 45.916864481978827;
+	setAttr ".coi" 57.505010730426321;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4980,12 +4980,12 @@ createNode mesh -n "polySurface15Shape" -p "polySurface15";
 		636 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "castle_flagRNfosterParent1";
-	rename -uid "5C2B5039-4419-13BE-949E-E8B73A9A1BC5";
+	rename -uid "4DB1A517-427E-BD5B-E30F-1EB05272A8AA";
 createNode transform -n "pCylinder7" -p "castle_flagRNfosterParent1";
 	rename -uid "30412E2F-4976-6F0B-C1DC-A89A98FAB3A6";
-	setAttr ".t" -type "double3" -9.0005776882171631 4.4209669307849371 0.30545366546538955 ;
+	setAttr ".t" -type "double3" -9.0005776882171631 4.1100671339469752 0.30545366546538955 ;
 	setAttr ".r" -type "double3" 0 89.999999999999972 0 ;
-	setAttr ".s" -type "double3" 0.87287983264889346 0.87287983264889346 0.87287983264889346 ;
+	setAttr ".s" -type "double3" 0.82355162702624751 0.98580396624631073 0.82355162702624751 ;
 	setAttr ".rp" -type "double3" 0.00057768821716308594 3.8166013956069946 -0.3054536654653911 ;
 	setAttr ".rpt" -type "double3" 0 0 1.5543122344752192e-15 ;
 	setAttr ".sp" -type "double3" 0.00057768821716308594 3.8166013956069946 -0.3054536654653911 ;
@@ -4995,7 +4995,6 @@ createNode mesh -n "pCylinder7Shape" -p "pCylinder7";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:425]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 3 ".ciog[0].cog";
 	setAttr -s 14 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "booleanIntersection";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 40 "e[306:308]" "e[315:317]" "e[330]" "e[350]" "e[375]" "e[391]" "e[394]" "e[397]" "e[400]" "e[403]" "e[406]" "e[409]" "e[426]" "e[431]" "e[435]" "e[437]" "e[446]" "e[449]" "e[455]" "e[464:468]" "e[683:685]" "e[692:694]" "e[707]" "e[727]" "e[752]" "e[768]" "e[771]" "e[774]" "e[777]" "e[780]" "e[783]" "e[786]" "e[803]" "e[808]" "e[812]" "e[814]" "e[823]" "e[826]" "e[832]" "e[841:845]";
@@ -6608,7 +6607,6 @@ createNode mesh -n "pCylinder6Shape" -p "pCylinder6";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:425]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 2 ".ciog[0].cog";
 	setAttr -s 14 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "booleanIntersection";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 40 "e[306:308]" "e[315:317]" "e[330]" "e[350]" "e[375]" "e[391]" "e[394]" "e[397]" "e[400]" "e[403]" "e[406]" "e[409]" "e[426]" "e[431]" "e[435]" "e[437]" "e[446]" "e[449]" "e[455]" "e[464:468]" "e[683:685]" "e[692:694]" "e[707]" "e[727]" "e[752]" "e[768]" "e[771]" "e[774]" "e[777]" "e[780]" "e[783]" "e[786]" "e[803]" "e[808]" "e[812]" "e[814]" "e[823]" "e[826]" "e[832]" "e[841:845]";
@@ -8210,23 +8208,23 @@ createNode mesh -n "pCylinder6Shape" -p "pCylinder6";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A9B4E39F-4F00-B9C3-7460-678613AF1687";
+	rename -uid "8F6F4761-4F5B-4D6B-14B3-C8B93B427E9B";
 	setAttr -s 11 ".lnk";
 	setAttr -s 11 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DFDEACB8-49CE-27F9-45DD-A28B8BC5B6BA";
+	rename -uid "9B268C80-462F-60A1-8151-F28C972FF89A";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5FD91506-4327-778B-3E54-1BB5998B9513";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6CA84894-4965-C53D-F52C-BFB83E4EFCDB";
+	rename -uid "97DE5501-4E2C-05FC-FD91-E99743503053";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "6A921F5E-442E-3416-1880-0AAEFBC4BD8E";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3D215345-4881-BF8D-5AEE-4EABB45C7830";
+	rename -uid "A51BEAD4-4355-D6D7-04A6-8E9D1691C8C7";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "7954270A-46F5-A06B-03DA-DEBF1D0AD646";
+	rename -uid "B7D1DF5B-4ABB-2A78-3C65-4CA6618B62CA";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "1567F6BF-490D-C22C-C903-408F7DB40F63";
 	setAttr ".b" -type "string" (
@@ -9258,7 +9256,7 @@ createNode reference -n "long_rugRN";
 	rename -uid "3E9D6C6B-4987-3DAD-1C97-7F928DC2BB18";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"long_rugRN"
-		"long_rugRN" 4
+		"long_rugRN" 6
 		2 "|bottom_rug_f_0:" "translate" " -type \"double3\" 0 0 3.53999703399847476"
 		
 		2 "|bottom_rug_f_0:" "scale" " -type \"double3\" 3.71237305868648315 1.85690566124109302 1.51935846415582088"
@@ -9267,14 +9265,18 @@ createNode reference -n "long_rugRN";
 		
 		2 "|bottom_rug_f_0:" "scale" " -type \"double3\" 3.50622466214105888 2.05104408947766359 1.76289719427965919"
 		
+		2 "|bottom_rug_f_0:" "translate" " -type \"double3\" 0 0 0.26910437850895219"
+		
+		2 "|bottom_rug_f_0:" "scale" " -type \"double3\" 2.18426872366231972 1.64088624178608877 1.42556130807557668"
+		
 		"long_rugRN" 4
 		2 "|long_rug:long_rug" "translate" " -type \"double3\" 0 0 0.26910437850895219"
 		
 		2 "|long_rug:long_rug" "scale" " -type \"double3\" 2.18426872366231972 1.64088624178608877 1.42556130807557668"
 		
-		2 "|bottom_rug_f_0:" "translate" " -type \"double3\" 0 0 0.26910437850895219"
+		2 "|bottom_rug_f_0:" "translate" " -type \"double3\" 0 0 1.87884592069216616"
 		
-		2 "|bottom_rug_f_0:" "scale" " -type \"double3\" 2.18426872366231972 1.64088624178608877 1.42556130807557668";
+		2 "|bottom_rug_f_0:" "scale" " -type \"double3\" 2.43229420649560657 1.3843500160287634 1.21419646460112096";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polySplit -n "polySplit1";
@@ -9426,22 +9428,22 @@ createNode groupId -n "groupId20";
 	rename -uid "C57E25BF-461C-4EE7-6494-7EACDC059B55";
 	setAttr ".ihi" 0;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "CD376DC5-4129-7104-059C-CCA839E20878";
+	rename -uid "3F9EF9F3-4728-3806-3B2B-EEB9FFFFFB02";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -622.61902287839041 -1265.542124213712 ;
-	setAttr ".tgi[0].vh" -type "double2" 2840.476077605812 507.20882101383677 ;
+	setAttr ".tgi[0].vl" -type "double2" -623.05769039146332 -1266.6666163338573 ;
+	setAttr ".tgi[0].vh" -type "double2" 2842.1052212620557 507.14283699081142 ;
 	setAttr -s 4 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -438.09521484375;
-	setAttr ".tgi[0].ni[0].y" -48.809520721435547;
+	setAttr ".tgi[0].ni[0].x" -144.047607421875;
+	setAttr ".tgi[0].ni[0].y" 64.285713195800781;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 461.42855834960938;
-	setAttr ".tgi[0].ni[1].y" 47.142856597900391;
+	setAttr ".tgi[0].ni[1].x" -438.09521484375;
+	setAttr ".tgi[0].ni[1].y" -48.809520721435547;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 154.28572082519531;
+	setAttr ".tgi[0].ni[2].x" 461.42855834960938;
 	setAttr ".tgi[0].ni[2].y" 47.142856597900391;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" -144.047607421875;
-	setAttr ".tgi[0].ni[3].y" 64.285713195800781;
+	setAttr ".tgi[0].ni[3].x" 154.28572082519531;
+	setAttr ".tgi[0].ni[3].y" 47.142856597900391;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
@@ -9524,8 +9526,8 @@ connectAttr "groupId9.msg" "Gothic_ArchRN1.phl[24]";
 connectAttr "groupId10.msg" "Gothic_ArchRN1.phl[25]";
 connectAttr "groupId12.msg" "Gothic_ArchRN1.phl[26]";
 connectAttr "groupId13.msg" "Gothic_ArchRN1.phl[27]";
-connectAttr "Gothic_ArchRN1.phl[28]" "polySurface8Shape.iog.og[3].gco";
-connectAttr "Gothic_ArchRN1.phl[29]" "polySurface7Shape.iog.og[4].gco";
+connectAttr "Gothic_ArchRN1.phl[28]" "polySurface7Shape.iog.og[4].gco";
+connectAttr "Gothic_ArchRN1.phl[29]" "polySurface8Shape.iog.og[3].gco";
 connectAttr "Gothic_ArchRN1.phl[30]" "polySurface9Shape.iog.og[3].gco";
 connectAttr "Gothic_ArchRN1.phl[31]" "polySurface13Shape.iog.og[4].gco";
 connectAttr "castle_flagRN.phl[1]" "pCylinder6Shape.iog.og[0].gco";
@@ -9691,13 +9693,13 @@ connectAttr "Walls_and_floorShape.wm" "polyBoolean4.im[1]";
 connectAttr "polyExtrudeFace7.out" "groupParts3.ig";
 connectAttr "groupId14.id" "groupParts3.gi";
 connectAttr "castle_flagRNfosterParent1.msg" "castle_flagRN.fp";
-connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "Castle_Colors_1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "colors.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "Castle_Colors_1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "colors.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "colors.msg" ":defaultShaderList1.s" -na;
