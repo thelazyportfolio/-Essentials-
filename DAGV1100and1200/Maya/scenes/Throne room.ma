@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Throne room.ma
-//Last modified: Fri, Apr 24, 2026 10:03:08 PM
+//Last modified: Fri, Apr 24, 2026 10:07:28 PM
 //Codeset: 1252
 file -rdi 1 -ns "Gothic_Arch" -rfn "Gothic_ArchRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Github/-Essentials-/DAGV1100and1200/Maya//scenes/Gothic Arch.ma";
@@ -29,17 +29,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "9095CE0D-4461-27D8-5503-7296615BB740";
+fileInfo "UUID" "A08B4638-48D9-FDE8-03EE-5985E860B52C";
 createNode transform -s -n "persp";
 	rename -uid "D7F9D35C-44BE-328F-A263-D3BEBDF4E7BC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 21.534248069188113 16.07685633658846 34.956129449234034 ;
-	setAttr ".r" -type "double3" -15.938352737184573 1473.7999999995611 -1.9137269100977807e-15 ;
+	setAttr ".t" -type "double3" 26.441683153682966 12.657048666179294 38.793398084018968 ;
+	setAttr ".r" -type "double3" -9.9383527371614964 1476.1999999994171 -1.4780256074444875e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3F98AA2C-46B8-18EA-98F7-B59E81B44840";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 42.065234393046971;
+	setAttr ".coi" 47.114553134173455;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4984,7 +4984,7 @@ createNode mesh -n "polySurface15Shape" -p "polySurface15";
 		636 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "castle_flagRNfosterParent1";
-	rename -uid "C5DE2403-4A4D-B396-EA89-2AA3DB949CC2";
+	rename -uid "6165107E-4DD9-C9D6-C9BF-3BB8E8AF3C53";
 createNode transform -n "pCylinder7" -p "castle_flagRNfosterParent1";
 	rename -uid "30412E2F-4976-6F0B-C1DC-A89A98FAB3A6";
 	setAttr ".t" -type "double3" -9.0005776882171631 4.1100671339469752 0.30545366546538955 ;
@@ -9255,7 +9255,7 @@ createNode groupParts -n "groupParts5";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:425]";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "C847A6A3-407F-8663-794E-828CB3A9D4A6";
+	rename -uid "CBEA4528-4941-E78E-7E27-52B5E61C0680";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -626.35771388319506 -1266.6666163338573 ;
 	setAttr ".tgi[0].vh" -type "double2" 2846.5957208969589 507.14283699081142 ;
